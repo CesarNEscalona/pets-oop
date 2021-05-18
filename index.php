@@ -24,6 +24,7 @@ $f3->route('GET /', function(){
     $pet1 = new Pet("Blackie", "Blue");
     $pet2 = new Pet("Fido", "White");
     $pet2->setName("Tubby");
+    $cat1 = new Cat("Monkey");
     // Test setters and getters
     echo $pet2->getName();
     echo"<br>";
@@ -45,6 +46,7 @@ $f3->route('GET /', function(){
     // var_dump($dog1);
     $dog1->fetch();
     $dog1->eat();
+    $cat1->scratch();
 });
 
 // Run Fat-Free
