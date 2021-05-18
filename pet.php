@@ -7,18 +7,25 @@ class Pet
     private $_name;
     private $_color;
 
+    // Default constructor
+    function __construct($name, $color="unknown")
+    {
+        $this->_name = $name;
+        $this->_color = $color;
+    }
+
     function eat()
     {
-        echo "Pet is eating<br>";
+        echo $this->_name . " is eating.<br>";
     }
 
     function talk()
     {
-        echo "Pet is barking<br>";
+        echo $this->_name . " is barking<br>";
     }
 
     function sleep()
     {
-        echo "Pet is sleeping<br>";
+        echo $this->_name . " is sleeping<br>";
     }
 }

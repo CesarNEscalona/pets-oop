@@ -23,9 +23,11 @@ $f3->route('GET /', function(){
     echo "<h1>Hello Pets!</h1>";
 
     // Instantiate a pet onj
-    $pet1 = new Pet();
+    $pet1 = new Pet("Blackie", "Blue");
 
     // Invoke the eat method
+    $pet1->eat();
+    $pet1->talk();
     $pet1->sleep();
 });
 
