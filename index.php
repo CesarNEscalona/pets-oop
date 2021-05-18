@@ -1,6 +1,6 @@
 <?php
 
-// This is my controller for the Dating project
+// This is my controller for the pets-oop project
 
 // Turn on error reporting
 ini_set('display_errors', 1);
@@ -9,8 +9,6 @@ error_reporting(E_ALL);
 // Require autoload file
 require_once ('vendor/autoload.php');
 
-// Require the pet class
-require('pet.php');
 
 // Start a session
 // session_start();
@@ -24,6 +22,16 @@ $f3->route('GET /', function(){
 
     // Instantiate a pet onj
     $pet1 = new Pet("Blackie", "Blue");
+    $pet2 = new Pet("Fido", "White");
+    $pet2->setName("Tubby");
+    // Test setters and getters
+    echo $pet2->getName();
+    echo"<br>";
+    echo $pet2->getColor();
+    echo"<br>";
+    $pet2->setColor("Black");
+    echo $pet2->getColor();
+
     echo "<pre>";
     var_dump($pet1);
     echo "</pre>";
@@ -32,6 +40,11 @@ $f3->route('GET /', function(){
     $pet1->eat();
     $pet1->talk();
     $pet1->sleep();
+
+    $dog1 = new Dog("Riley", "Brown");
+    // var_dump($dog1);
+    $dog1->fetch();
+    $dog1->eat();
 });
 
 // Run Fat-Free
