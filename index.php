@@ -24,6 +24,9 @@ $f3->route('GET /', function(){
 
     // Instantiate a pet onj
     $pet1 = new Pet("Blackie", "Blue");
+    echo "<pre>";
+    var_dump($pet1);
+    echo "</pre>";
 
     // Invoke the eat method
     $pet1->eat();

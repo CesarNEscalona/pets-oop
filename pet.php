@@ -8,7 +8,7 @@ class Pet
     private $_color;
 
     // Default constructor
-    function __construct($name, $color="unknown")
+    function __construct($name="Unknown", $color="Unknown")
     {
         $this->_name = $name;
         $this->_color = $color;
